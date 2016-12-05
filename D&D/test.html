@@ -1,0 +1,84 @@
+<html>
+<head>
+</head>
+<title>D&D </title>
+<script src="D&D.js"></script>
+<body onload="showHtmlElement('start');" style="text-align:center; background-image: url('https://wallpaperscraft.com/image/trees_green_entrance_stairs_planet_61651_2000x1320.jpg'); background-size:cover; text-shadow: -5px -5px 9px white;">
+<font size='4' face="Comic Sans Ms">
+<div style="width:70%; display: inline-block;">
+<div style="z-index:99;position:relative;"><button onclick="showHtmlElement('start');">Restart</button></div>
+<div id="typewriter"></div>
+
+<div id="start" style="display:none;" style="z-index:1;position:relative;">
+	<center><img src='Karte.jpg' style="width:100%;box-shadow: 0px 0px 15px 15px #222;margin: 10px 0;overflow: hidden;padding: 0;"> 
+	<p>You are a great potato. You leave the safe village and travel through the lands of South-Earth until you reach a giant forest. You have to decide if you wanna go THROUGH the forest or take a longer route and AVOID the forest. If you don't like adventures you could also walk BACK to the village...but that's lame, right?</p>
+	<button onclick="showHtmlElement('through');">go through</button>
+	<button onclick="showHtmlElement('avoid');">go around</button>
+	<button onclick="showHtmlElement('back');">go back</button></center>
+</div>
+
+<div id="through" style="display:none;width:100%;">
+	<img src='http://placehold.it/150x150' > 
+	<tt><p>You're going through the forest and stumble into a creature which looks like a tree. You could either try to talk to him and ask for a way through the forest or you could try to fight this harmless creature and take his stuff. </p></tt>
+	<button onclick="showHtmlElement('Tree');">Ok</button>
+</div>
+
+<div id="avoid" style="display:none;">
+	<img src='http://placehold.it/150x150' > 
+	<tt><p>You want to take the safe route? No problem but suddenly pinapples! Ähm also you are surrounded by Orcs...They're holding in position and threaten you to give them all your gold and food. There are not too many Orcs so you could have a chance but fighting against 20 Orcs might be a bit risky. But if you can talk properly you could maybe find another solution. So what's next ? </p></tt>
+	<button onclick="Orc();">Ok</button>
+</div>
+
+<div id="back" style="display:none;">
+	<img src='http://placehold.it/150x150' > 
+	<tt><p>You, the Potato of the story and 'great' adventurer, are heading back to the village because your life doesn't need another adventure. Your Story ends here. END OF THE STORY. But you can restart and explore other endings. </p></tt>
+	<button onclick="showHtmlElement('start');">Ok</button>
+</div>
+
+<div id="Tree" style="display:none;">
+	<img src='http://placehold.it/150x150' > 
+	<tt><p>Now are you a diplomat or a berserker? Are you going to attack a tree? Or are you gonna ask for a way through the forest. And maybe he needs help? Who knows? So it's time to decide: ATTACK or TALK. </p></tt>
+	<button onclick="TreeAttack();">Attack!</button>
+	<button onclick="TreeTalk();">Talk!</button>
+</div>
+</div>
+</font>
+
+
+
+
+
+<script>
+function showHtmlElement(elementId) {
+var str = document.getElementById(elementId).innerHTML,
+    i = 0,
+    isTag,
+    text;
+
+(function type() {
+    text = str.slice(0, ++i);
+    if (text === str) return;
+
+    document.getElementById('typewriter').innerHTML = text;
+
+    var char = text.slice(-1);
+    if( char === '<' ) isTag = true;
+    if( char === '>' ) isTag = false;
+
+    if (isTag) return type();
+    setTimeout(type, 10);
+}());
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+</body>
+</html>

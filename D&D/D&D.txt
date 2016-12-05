@@ -1,0 +1,15 @@
+function tree_2_1
+
+race && peaceful
+true = quest
+beides false = nicht mit einem reden, im wald umher irren -> falschen ort finden
+race || peaceful
+true = misstrauisch, falschen weg geben -> falschen ort finden
+
+
+quest erhalten zu einem dorf zu gehen und dort dieses dorf gegen einen vermuteten Orkangriff helfen zu verteidigen
+
+orks sterben, stadt wird halb zerstört
+entscheidung:
+sofort zurückgehen -> baummensch nicht sehr erfreut aber gibt einen ungefähren weg
+etwas plündern, dann zurück -> baummensch erkennt schlechten charakter und man wird bestraft: ende
